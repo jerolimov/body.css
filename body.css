@@ -2,6 +2,10 @@ html {
   /* Use border box model */
   box-sizing: border-box;
 
+  -webkit-text-size-adjust: none;
+  touch-action: manipulation;
+  -webkit-text-size-adjust: none;
+
   /* Antialiasing */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -53,4 +57,17 @@ h1, h2, h3 {
 a:focus {
   /* Firefox (remove border on link click) */
   outline: 0;
+}
+
+/*
+ * Respects the safe-areas
+ * https://webkit.org/blog/7929/designing-websites-for-iphone-x/
+ */
+@supports(padding: max(0px)) {
+  body {
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
 }
