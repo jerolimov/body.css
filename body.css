@@ -3,8 +3,8 @@ html {
   box-sizing: border-box;
 
   /* Antialiasing */
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 
   /*  Prevent adjustments of font size after orientation changes. */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -12,7 +12,8 @@ html {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   /* Disable text select */
-  -webkit-user-select: none;                
+  -webkit-user-select: none;
+  user-select: none;
 
   /* Disable callout where the user can save images */
   -webkit-touch-callout: none;             
